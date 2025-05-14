@@ -11,11 +11,15 @@ internal sealed class CSharpSandboxMcpTools
         This method executes the provided C# script using the dotnet-script tool.
         It creates a unique file for the script, runs it,
         and returns the output or throws an exception if execution fails.
+    """)]
+    public async Task<string> ExecuteScriptAsync([Description("""
+        The script to execute
 
         Example script:
-        Console.WriteLine("Hello, world!");
-    """)]
-    public async Task<string> ExecuteScriptAsync([Description("The script to execute")] string script)
+            Console.WriteLine("Hello, world!");
+        
+            Note: There is no need to write a main function, just provide the C# code.
+        """)] string script)
     {
         string fileName = await CreateScriptFileAsync(script);
         return await RunScriptAsync(fileName);
