@@ -1,6 +1,8 @@
 # C# Code Sandbox MCP
 
-A C#–based Model Context Protocol (MCP) server that spins up disposable Docker containers to execute arbitrary C# scripts.
+A C#–based Model Context Protocol (MCP) server that executes arbitrary C# scripts.
+
+![Demo](demo.png)
 
 ## Prerequisites
 
@@ -41,11 +43,6 @@ To run the server, you need to configure the AI agent with the following setting
 ```
 
 Replace `{PROJECT-PATH}` with the absolute path to the project directory.
-
-## Features
-
-- Executes arbitrary C# scripts in isolated Docker containers.
-- Provides a secure and disposable environment for script execution.
 
 ## Acknowledgments
 
